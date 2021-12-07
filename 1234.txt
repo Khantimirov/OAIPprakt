@@ -1,0 +1,117 @@
+1)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            Console.Write("Введите первое число: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите второе число: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите третье число: ");
+            c = Convert.ToInt32(Console.ReadLine());
+            if (a>b && a<c)
+            {
+                Console.WriteLine("Среднее - "+a);
+            }
+            if (a>c && a<b)
+            {
+                Console.WriteLine("Среднее - "+a);
+            }
+            if (b > a && b < c)
+            {
+                Console.WriteLine("Среднее - " + b);
+            }
+            if (b > c && b < a)
+            {
+                Console.WriteLine("Среднее - " + b);
+            }
+            if (c > b && c < a)
+            {
+                Console.WriteLine("Среднее - " + c);
+            }
+            if (c > a && c < b)
+            {
+                Console.WriteLine("Среднее - " + c);
+            }
+          }
+        }
+    }
+2)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int uu;
+            int[] Massiv = { 0, 2, 3, 4, 8, 12, 56, 84, 0, 8, 85, 14, 16, 18, 19, 25, 0, 12, 84, 77, 99, 22, 73, 4, 45, 0, 66, 69 };
+        Console.WriteLine("Осадки");
+        int SummCetka = 0;
+        int SummNeCetka = 0;
+        for (int i = 0; i <= 27; i++)
+        {
+            uu = i + 1;
+                    Console.WriteLine("День "+ uu+ ": " +Massiv[i]);
+            if (i % 2 == 0)
+            {
+                SummCetka = SummCetka + Massiv[i];
+            }
+            if (i % 2 == 1)
+            {
+                SummNeCetka = SummNeCetka + Massiv[i];
+            }
+        }
+        if (SummCetka > SummNeCetka)
+        {
+            Console.WriteLine("Да, по чётным больше");
+        }
+        else
+        {
+            Console.WriteLine("Нет, по чётным меньше");
+        }
+        }
+    }
+}
+3)
+#include "stdafx.h"
+#include <iostream>
+#include <ctime>
+#include <time.h>
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int Massiv[15];
+	int Summa = 0;
+	int count = 0;
+	cout << "Massiv: ";
+	for (int i = 0; i < 15; i++)
+	{
+		Massiv[i] = (rand() % 40 + (-10));
+		cout << Massiv[i] << " ";
+		if (Massiv[i] > 0)
+		{
+		count = count + 1;
+		Summa = Summa + Massiv[i];
+		}
+	}
+	cout << endl << "Srednee Arifmeticeskoe(Polozhitelnyh cisel): " << Summa/count << endl;
+	return 0;
+}
+
